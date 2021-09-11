@@ -2,7 +2,7 @@ package fundamentals.section1.exercises
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-internal class Ec_1_1_9KtTest {
+internal class Ec_1_1_09KtTest {
 
     @Test
     fun test() {
