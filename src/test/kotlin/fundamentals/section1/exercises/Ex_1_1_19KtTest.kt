@@ -3,7 +3,7 @@ package fundamentals.section1.exercises
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class Ex_1_1_19KtTest{
+class Ex_1_1_19KtTest {
 
     @Test
     fun testIterative() {
