@@ -1,6 +1,6 @@
 package fundamentals.section3.algorithms
 
-class Stack<T> {
+class Stack<T>: Iterable<T> {
 
     var root: Stack<T>.Node? = null
         private set
@@ -38,6 +38,22 @@ class Stack<T> {
 
     fun peek(): T? {
         return if (isEmpty()) null  else root?.item
+    }
+
+    override fun iterator(): Iterator<T> {
+        return object: Iterator<T>{
+            private var current: Stack<T>.Node? = root
+
+            override fun hasNext(): Boolean {
+                return current != null
+            }
+
+            override fun next(): T {
+                val item = current!!.item
+                current = current!!.next
+                return item
+            }
+        }
     }
 
 }
