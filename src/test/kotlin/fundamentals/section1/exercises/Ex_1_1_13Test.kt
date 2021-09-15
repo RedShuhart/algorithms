@@ -3,7 +3,7 @@ package fundamentals.section1.exercises
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-internal class Exc_1_1_13Test {
+class Ex_1_1_13Test {
 
     @Test
     fun test() {
