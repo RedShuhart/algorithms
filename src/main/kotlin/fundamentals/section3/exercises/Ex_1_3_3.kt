@@ -16,7 +16,7 @@ fun isBalanced(input: String): Boolean {
                 return false
             }
             val firstItem = stack.pop()
-            if (firstItem.equals(openToClosed[parenthesis])) {
+            if (parenthesis != openToClosed[firstItem]) {
                 return false
             }
         }
