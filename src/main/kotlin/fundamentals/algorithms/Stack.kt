@@ -1,8 +1,8 @@
-package fundamentals.section3.algorithms
+package fundamentals.algorithms
 
 class Stack<T>: Iterable<T> {
 
-    var root: Stack<T>.Node? = null
+    var root: Node? = null
         private set
     var size: Int = 0
         private set
@@ -40,7 +40,7 @@ class Stack<T>: Iterable<T> {
         return if (isEmpty()) null  else root?.item
     }
 
-    override fun iterator(): Iterator<T> {
+    override fun  iterator(): Iterator<T> {
         return object: Iterator<T>{
             private var current: Stack<T>.Node? = root
 

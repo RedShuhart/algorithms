@@ -1,5 +1,6 @@
-package fundamentals.section3.algorithms
+package fundamentals.algorithms
 
+import fundamentals.algorithms.Stack
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
