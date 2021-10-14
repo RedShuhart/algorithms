@@ -4,10 +4,10 @@ import fundamentals.algorithms.Stack
 
 internal val supportedOperators = listOf("+", "-", "*", "/")
 
-fun toInfixExpression(postfixExpression: String): String {
+fun toInfixExpression(expression: String): String {
     val operands = Stack<String>()
     val operators = Stack<String>()
-    val inputValues = postfixExpression.chunked(1)
+    val inputValues = expression.chunked(1)
     inputValues.forEach { value ->
         when {
             value == "(" -> {}
