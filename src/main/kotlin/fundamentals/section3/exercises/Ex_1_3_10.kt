@@ -2,12 +2,10 @@ package fundamentals.section3.exercises
 
 import fundamentals.algorithms.Stack
 
-internal val supportedOperators = listOf("+", "-", "*", "/")
-
-fun toInfixExpression(postfixExpression: String): String {
-    val operands = Stack<String>()
-    val operators = Stack<String>()
-    val inputValues = postfixExpression.chunked(1)
+fun toPostfixExpression(infixExpression: String): String {
+    val operands = Stack<String> ()
+    val operators = Stack<String> ()
+    val inputValues = infixExpression.chunked(1)
     inputValues.forEach { value ->
         when {
             value == "(" -> {}
@@ -15,11 +13,11 @@ fun toInfixExpression(postfixExpression: String): String {
                 operators.push(value)
             }
             value == ")" -> {
+                val value2 = operands.pop()
+                val value1 = operands.pop()
                 val operator = operators.pop()
-                val right = operands.pop()
-                val left = operands.pop()
-                val subExpression = "( $left $operator $right )"
-                operands.push(subExpression)
+                val newExpression = "$value1 $value2 $operator"
+                operands.push(newExpression)
             }
             else -> {
                 operands.push(value)
